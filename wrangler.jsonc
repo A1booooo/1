@@ -1,0 +1,28 @@
+{
+  "name": "practice-projects",
+  "main": "src/index.js",
+  "compatibility_date": "2025-10-06",
+
+  "assets": {
+    "directory": "./assets",
+    "binding": "ASSETS"
+  },
+
+  "vars": {
+    "ENVIRONMENT": "production"
+  },
+
+  "kv_namespaces": [
+    // {
+    //   "binding": "MY_KV_NAMESPACE",
+    //   "id": "xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx"
+    // }
+  ],
+
+  "r2_buckets": [
+    // {
+    //   "binding": "MY_BUCKET",
+    //   "bucket_name": "my-bucket"
+    // }
+  ]
+}

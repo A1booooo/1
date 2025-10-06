@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Practice Projects - Cloudflare Workers</title>
+    <style>
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+            max-width: 800px;
+            margin: 0 auto;
+            padding: 2rem;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            color: white;
+            min-height: 100vh;
+        }
+        .container {
+            background: rgba(255, 255, 255, 0.1);
+            border-radius: 15px;
+            padding: 2rem;
+            backdrop-filter: blur(10px);
+            box-shadow: 0 8px 32px rgba(0, 0, 0, 0.3);
+        }
+        h1 {
+            text-align: center;
+            margin-bottom: 2rem;
+            font-size: 2.5rem;
+        }
+        .project-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 1rem;
+            margin-top: 2rem;
+        }
+        .project-card {
+            background: rgba(255, 255, 255, 0.1);
+            padding: 1rem;
+            border-radius: 10px;
+            border: 1px solid rgba(255, 255, 255, 0.2);
+            transition: transform 0.3s ease;
+        }
+        .project-card:hover {
+            transform: translateY(-5px);
+        }
+        .project-card h3 {
+            margin-top: 0;
+            color: #ffd700;
+        }
+        .project-card a {
+            color: #87ceeb;
+            text-decoration: none;
+        }
+        .project-card a:hover {
+            text-decoration: underline;
+        }
+        .api-link {
+            text-align: center;
+            margin-top: 2rem;
+        }
+        .api-link a {
+            color: #ffd700;
+            font-weight: bold;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>🚀 Practice Projects</h1>
+        <p>欢迎来到我的项目集合！这些项目部署在Cloudflare Workers上。</p>
+
+        <div class="project-grid">
+            <div class="project-card">
+                <h3>📚 电子书网站</h3>
+                <p>响应式电子书展示网站</p>
+                <a href="/ebook/">查看项目</a>
+            </div>
+
+            <div class="project-card">
+                <h3>🎨 HSD 低代码平台</h3>
+                <p>基于React的低代码开发平台</p>
+                <a href="/HSD/">查看项目</a>
+            </div>
+
+            <div class="project-card">
+                <h3>👨‍🎓 学生管理系统</h3>
+                <p>完整的学生信息管理系统</p>
+                <a href="/student-management/">查看项目</a>
+            </div>
+
+            <div class="project-card">
+                <h3>📖 React学习项目</h3>
+                <p>React学习练习项目集合</p>
+                <a href="/learn-react/">查看项目</a>
+            </div>
+
+            <div class="project-card">
+                <h3>📝 备忘录应用</h3>
+                <p>基于React的备忘录管理应用</p>
+                <a href="/memo/">查看项目</a>
+            </div>
+        </div>
+
+        <div class="api-link">
+            <p>🔗 <a href="/health">API健康检查</a></p>
+        </div>
+    </div>
+</body>
+</html>
