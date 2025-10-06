@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+<style>
+  body {
+    background-image: linear-gradient(to bottom left, #65ceff, #27a9ff);
+    height: 100vh;
+  }
+
+  .box {
+    inset: 0;
+    margin: 0;
+    --x: clamp(50%, var(--pointer-x, 50vw), calc(100vw - 50%));
+    --y: clamp(50%, var(--pointer-y, 50vh), calc(100vh - 50%));
+    transition: transform 0.9s linear(0, 1.3 10%, 0.8 25%, 1.1 35%, 1);
+    transform: translate(var(--x), var(--y)) translate(-50%, -50%);
+    background-color: transparent;
+    position: fixed;
+    border: none;
+  }
+</style>
+
+<body>
+  <dialog class="box" open>
+    <img src="./image/17.gif" alt="">
+  </dialog>
+</body>
+<script>
+  let box = document.querySelector('.box');
+  document.addEventListener('pointermove', e => {
+    box?.style.setProperty('--pointer-x', `${e.clientX}px`);
+    box?.style.setProperty('--pointer-y', `${e.clientY}px`);
+  });
+  document.addEventListener('pointerleave', e => {
+    box.style.removeProperty('--pointer-x');
+    box.style.removeProperty('--pointer-y');
+  });
+</script>
+
+</html>

@@ -1,0 +1,161 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+<style>
+  /* 基础公共样式：清除默认样式 + 设置通用样式 */
+  * {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+
+  li {
+    list-style: none;
+  }
+
+  body {
+    font: 14px/1.5 "Microsoft Yahei", "Hiragino Sans GB", "Heiti SC", "WenQuanYi Micro Hei", sans-serif;
+    color: #333;
+    background-color: rgb(236, 213, 173);
+  }
+
+  a {
+    color: #333;
+    text-decoration: none;
+  }
+
+  /* 版心 */
+  body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    background-color: rgb(210, 210, 220);
+  }
+
+  .shell {
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    min-width: 1000px;
+    transform-style: preserve-3d;
+    perspective: 900px;
+  }
+  
+  .shell .box {
+    position: relative;
+    margin: 30px;
+    width: 250px;
+    height: 350px;
+    overflow: hidden;
+    transition: all 0.5s ease;
+    transition-delay: .1s;
+    border-radius: 5px;
+    border: #fff solid 5px;
+  }
+
+  .shell:hover .box {
+    transform: rotateY(20deg);
+  }
+
+  .shell .box:hover {
+    transform: rotateY(0deg) scale(1.25);
+    box-shadow: 0 25px 40px rgba(0, 0, 0, 0.7);
+  }
+
+  .shell .box:hover~.box  {
+    transform: rotateY(-20deg);
+  }
+
+  .shell .box img {
+    width: 100%;
+  }
+
+  .shell .box .content {
+    position: absolute;
+    top: 0;
+    z-index: 99;
+    width: 90%;
+    padding: 15px;
+  }
+
+  .shell .box .content h2 {
+    color: #f0a8a8;
+    font-size: 20px;
+    transform: translateY(-100px);
+    transition: all 0.3s ease;
+  }
+
+  .shell .box:hover .content h2 {
+    transform: translateY(-15px);
+  }
+
+ .shell .box .content p {
+  border-radius: 6px;
+  transition: all 0.3s ease;
+  transform: translateY(300px);
+  background-color: rgba(255, 255, 255, 0.6);
+ }
+
+ .shell .box:hover .content p {
+  transform: translateY(220px);
+ }
+
+
+</style>
+<body>
+  <div class="shell">
+    <div class="box">
+      <div class="image">
+        <img src="./image/006vqr6Rgy1gr9oict8e4j34gr6beb2f.jpg" alt="">
+      </div>
+      <div class="content">
+        <h2>ZeenChin</h2>
+        <p>The style in the painting integrates temptation, fantasy and strangeness</p>
+      </div>
+    </div>
+    <div class="box">
+      <div class="image">
+        <img src="./image/006vqr6Rgy1gxg09e3jumj34gr6benpf.jpg" alt="">
+      </div>
+      <div class="content">
+        <h2>ZeenChin</h2>
+        <p>The style in the painting integrates temptation, fantasy and strangeness</p>
+      </div>
+    </div>
+    <div class="box">
+      <div class="image">
+        <img src="./image/006vqr6Rgy1h74oqzk82lj34gr6bee84.jpg" alt="">
+      </div>
+      <div class="content">
+        <h2>ZeenChin</h2>
+        <p>The style in the painting integrates temptation, fantasy and strangeness</p>
+      </div>
+    </div>
+    <div class="box">
+      <div class="image">
+        <img src="./image/006vqr6Rgy1hc7hpgpvi0j30j60r40wr.jpg" alt="">
+      </div>
+      <div class="content">
+        <h2>ZeenChin</h2>
+        <p>The style in the painting integrates temptation, fantasy and strangeness</p>
+      </div>
+    </div>
+    <div class="box">
+      <div class="image">
+        <img src="./image/006vqr6Rgy1hc7hpmxqs5j31hc23gtwi.jpg" alt="">
+      </div>
+      <div class="content">
+        <h2>ZeenChin</h2>
+        <p>The style in the painting integrates temptation, fantasy and strangeness</p>
+      </div>
+    </div>
+  </div>
+</body>
+</html>

@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+<link rel="stylesheet" href="./style.css">
+
+<body>
+  <div class="cards">
+    <div class="card">
+      <div class="card-content"></div>
+    </div>
+    <div class="card">
+      <div class="card-content"></div>
+    </div>
+    <div class="card">
+      <div class="card-content"></div>
+    </div>
+    <div class="card">
+      <div class="card-content"></div>
+    </div>
+    <div class="card">
+      <div class="card-content"></div>
+    </div>
+    <div class="card">
+      <div class="card-content"></div>
+    </div>
+  </div>
+</body>
+<script>
+  const cards = document.querySelectorAll('.card');
+  const wrapper = document.querySelector('.cards');
+  wrapper.addEventListener('pointermove', (e) => {
+    cards.forEach(card => {
+      const rect = card.getBoundingClientRect();
+      const x = e.clientX - rect.left;
+      const y = e.clientY - rect.top;
+      card.style.background = `radial-gradient(circle at ${x}px ${y}px, rgba(106, 0, 255, 0.9), transparent 15%)`;
+    })
+  })
+</script>
+
+</html>
